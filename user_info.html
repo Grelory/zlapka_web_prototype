@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZLAPKA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.conversejs.org/7.0.4/dist/converse.min.css">
+    <script src="https://cdn.conversejs.org/7.0.4/dist/converse.min.js" charset="utf-8"></script>
+    <style>
+        input.hidden {
+            position: absolute;
+            left: -9999px;}
+        #profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+	border:2px solid #03b1ce ;}
+	        .tital{ font-size:16px; font-weight:500;}
+	         .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}
+    </style>
+</head>
+<body>
+<div class="content">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand active" href="./map_index.html">ZLAPKA</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="./user_info.html">Panel Uzytkownika</a></li>
+                    <li><a href="">Wydarzenia</a></li>
+                    <li><a href="">Grupy</a></li>
+                    <li><a href="">Czat</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Pomoc</a></li>
+                    <li><a href="">Zaloguj</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div class="content-wrapper">
+    </div>
+    <div class="container">
+        <div class="row">
+
+           <div class="col-md-7 ">
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">  <h4 >User Profile</h4></div>
+       <div class="panel-body">
+           
+        <div class="box box-info">
+            
+                <div class="box-body">
+                         <div class="col-sm-6">
+                         <div  align="center"> <img id="photo" alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
+                    
+                    <input id="profile-image-upload" class="hidden" type="file">
+                    <!--Upload Image Js And Css-->
+               
+                  
+       
+                    
+                    
+                         
+                         
+                         </div>
+                  
+                  <br>
+        
+                  <!-- /input-group -->
+                </div>
+                <div class="col-sm-6">
+                <h4 id="username" style="color:#060d0f;"></h4></span> <!-- Username-->
+                  <span><p id="role"></p></span>            <!-- ROLE-->
+                </div>
+                <div id="description" class="col-sm-5 col-xs-6 tital " ></div><div class="col-sm-7"></div>
+    
+                <div class="clearfix"></div>
+               <div class="bot-border"></div>
+
+                <div class="clearfix"></div>
+                <hr style="margin:5px 0 5px 0;">
+        
+                  
+    <div  class="col-sm-5 col-xs-6 tital " >Imię:</div><div id="firstname" class="col-sm-7 col-xs-6 "></div>
+         <div class="clearfix"></div>
+    <div class="bot-border"></div>
+
+    
+    <div class="col-sm-5 col-xs-6 tital " >Nazwisko:</div><div id="lastname" class="col-sm-7"> </div>
+      <div class="clearfix"></div>
+    <div class="bot-border"></div>
+    
+    <div class="col-sm-5 col-xs-6 tital " >Data urodzenia:</div><div id="birth" class="col-sm-7"></div>
+    
+      <div class="clearfix"></div>
+    <div class="bot-border"></div>
+    
+    <div  class="col-sm-5 col-xs-6 tital " >Numer:</div><div id="number" class="col-sm-7"></div>
+    
+      <div class="clearfix"></div>
+    <div class="bot-border"></div>
+    
+    <div  class="col-sm-5 col-xs-6 tital " >Email:</div><div id="email" class="col-sm-7"></div>
+    
+     <div class="clearfix"></div>
+    <div class="bot-border"></div>
+    
+    <div  class="col-sm-5 col-xs-6 tital " >Wynik:</div><div id="score" class="col-sm-7"></div>
+    
+    
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+    
+            </div>
+           
+                
+        </div> 
+        </div>
+    </div>  
+        <script>
+                  $(function() {
+        $('#profile-image1').on('click', function() {
+            $('#profile-image-upload').click();
+        });
+    });       
+                  </script> 
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       </div>
+    </div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <script>
+        async function getUserInfoFromBackend() 
+        {
+            var response= await fetch("http://localhost:5000/userApi/users/userId/info?userId=3d280c89-0825-4196-b11a-d13131ce107f");
+            var data = await response.json();
+            return data;
+        }
+        async function SetData()
+        {
+        let userData = await getUserInfoFromBackend();
+        console.log(userData);
+        var userName = document.getElementById("number");
+        userName.innerText = userData.phoneNumber;
+        var userName = document.getElementById("score");
+        userName.innerText = userData.score;
+        var userName = document.getElementById("birth");
+        userName.innerText = userData.dateOfBirth.substring(0,10);;
+        var userName = document.getElementById("username");
+        userName.innerText = userData.userName;
+        var userName = document.getElementById("firstname");
+        userName.innerText = userData.firstName;
+        var userName = document.getElementById("lastname");
+        userName.innerText = userData.secondName;
+        var userName = document.getElementById("description");
+        userName.innerText = userData.description;
+        var userName = document.getElementById("email");
+        userName.innerText = userData.email;
+        var userName = document.getElementById("photo");
+        userName.innerText = userData.photoDir;
+        var userName = document.getElementById("role");
+        userName.innerText = userData.role;
+        }
+        SetData();
+    </script>
+
+</div>
+</body>
+</html>
